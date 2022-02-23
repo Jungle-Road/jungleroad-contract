@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/utils/Pausable.sol";
 
 contract JungleRoadToken is ERC20, Pausable {
-    address public multiSigWallet; // create by gnosis safe
+    address public immutable multiSigWallet; // created by gnosis safe
 
     /**
      * @notice Require that the sender is the multiSigWallet.
